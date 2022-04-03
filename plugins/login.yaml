@@ -7,7 +7,7 @@ spec:
   homepage: https://github.com/devopstales/kube-openid-connect
   shortDescription: Login to a cluster via openid-connect
   description: |
-    Launches a browser to login to the cluster via openid-connect. openid-connect's 
+    Launches a browser to login to the cluster via DevOpsTales openid-connect-server. openid-connect-server's 
     certificate MUST be trusted by the local system.
 
     Run `kubectl login <openid-connect-ingress-url>`.
