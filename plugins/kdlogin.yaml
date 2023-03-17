@@ -1,0 +1,77 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: kdlogin
+spec:
+  version: v0.1
+  platforms:
+    - bin: kubectl-kdlogin.exe
+      uri: https://github.com/devopstales/KubeDash/releases/download/0.1/kubectl-kdlogin_Windows_x86_64.zip
+      sha256: b40f205f3dfd0d34268ebe2daa80e3c75f6ced39636946779c87ebff761d1d71
+      selector:
+        matchLabels:
+          os: windows
+          arch: amd64
+    - bin: kubectl-kdlogin.exe
+      uri: https://github.com/devopstales/KubeDash/releases/download/0.1/kubectl-kdlogin_Windows_arm64.zip
+      sha256: b21aaac614ea43eb1f624c9b415ead1770d211ad7d38f65085ed19328d772bfd
+      selector:
+        matchLabels:
+          os: windows
+          arch: arm64
+    - bin: kubectl-kdlogin
+      uri: https://github.com/devopstales/KubeDash/releases/download/0.1/kubectl-kdlogin_Linux_x86_64.tar.gz
+      sha256: 422fdea934c75bc20222550f926c1ff3828d6035d897d3e1ad009d33fcfa50e0
+      selector:
+        matchLabels:
+          os: linux
+          arch: amd64
+    - bin: kubectl-kdlogin
+      uri: https://github.com/devopstales/KubeDash/releases/download/0.1/kubectl-kdlogin_Linux_arm64.tar.gz
+      sha256: 196b4ce02eb7d3ec1819ecf50d7337c4d352a7073a15c74a078ab045868771a7
+      selector:
+        matchLabels:
+          os: linux
+          arch: arm64
+    - bin: kubectl-kdlogin
+      uri: https://github.com/devopstales/KubeDash/releases/download/0.1/kubectl-kdlogin_Darwin_x86_64.tar.gz
+      sha256: 7c350ae662bc190c0855d41169b3300c40338bf2d898ed9198059ef1b01cd5ba
+      selector:
+        matchLabels:
+          os: darwin
+          arch: amd64
+    - bin: kubectl-kdlogin
+      uri: https://github.com/devopstales/KubeDash/releases/download/0.1/kubectl-kdlogin_Darwin_arm64.tar.gz
+      sha256: 8e4928333842afa86e4cb78f3c197e5507ea32ec07bebc44d9a6edd29f42bae9
+      selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+  shortDescription: Login to a cluster via openid-connect
+  homepage: https://devopstales.github.io
+  caveats: |
+    1) You need to install the kubedash server by helm:
+        helm repo add devopstales https://devopstales.github.io/helm-charts
+        helm repo update
+        kubectl create ns kubedash
+        kubens kubedash
+        helm upgrade --install kubedash devopstales/kubedash -f values.yaml
+    2) You need to setup the OIDC provider at Kubernetes API server.
+        nano /etc/kubernetes/manifests/kube-apiserver.yaml
+        ...
+        command:
+        - /hyperkube
+        - apiserver
+        ...
+        - --oidc-issuer-url=<oidcServerURL>
+        - --oidc-client-id=<oidcClientID>
+        - --oidc-username-claim=email
+        - --oidc-groups-claim=groups
+        # for self sign cert or custom ca
+        #- --oidc-ca-file=/etc/kubernetes/pki/rootca.pem
+        systemctl restart kubelet
+    3) You need to setup role binding for users or groupe.
+  description: |
+    Run `kubectl kdlogin <kubedash-ingress-url>`.
+    It automatically opens the browser and you can log in to the provider.
+    After authentication, it writes the token to the kubeconfig and you can access the cluster.
