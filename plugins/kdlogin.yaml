@@ -7,42 +7,42 @@ spec:
   platforms:
     - bin: kubectl-kdlogin.exe
       uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Windows_x86_64.zip
-      sha256: 17a15a5c312d6e38257c132e59d28b93f5652aa061b4b25c9d1b533b7844b5de
+      sha256: 009eb049f9a37013b1a0cc58731af5b77f9c9cd158f574e9ba3f564ca679206a
       selector:
         matchLabels:
           os: windows
           arch: amd64
     - bin: kubectl-kdlogin.exe
       uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Windows_arm64.zip
-      sha256: 8e722bc4673564017bcdd823ec8b897a558a7629551bdee5e7d83ed6c0cd77da
+      sha256: 2b7da8e26cea5c6b251207a99cb324590d75f1ca5838265c4d0a221928966de7
       selector:
         matchLabels:
           os: windows
           arch: arm64
     - bin: kubectl-kdlogin
       uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Linux_x86_64.tar.gz
-      sha256: 4b508bc147e46bb4e267c26df2cc7b2bb437bb303674cebca45e156d72ec4658
+      sha256: 7933936a0afb95fe6edebf84bc22b1cb9a2aad1e9e1fccc2303010f14c632c2c
       selector:
         matchLabels:
           os: linux
           arch: amd64
     - bin: kubectl-kdlogin
       uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Linux_arm64.tar.gz
-      sha256: 9e259a2d1d8d7d1b50ebdf3758b838da133fe36f88665e18cb64d8b7481008d9
+      sha256: 4224e4b40ec3c959ea6bd7d0d2578a5c36df2f7921982ebe8869681ed16358de
       selector:
         matchLabels:
           os: linux
           arch: arm64
     - bin: kubectl-kdlogin
       uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Darwin_x86_64.tar.gz
-      sha256: 30eee1eb75af2b86669c69bdebd69f857c023a217612af07971bc9937512147f
+      sha256: 09933f3bcdabf3cd3bf4f32171fdc5320f3567253819ce0b3db9f201da1fb286
       selector:
         matchLabels:
           os: darwin
           arch: amd64
     - bin: kubectl-kdlogin
       uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Darwin_arm64.tar.gz
-      sha256: 7ff661f72ae30c45a2df2736974de57e636bbb77834593c402f9f12e49f2acaf
+      sha256: d6f12f049655f6bf7410e875759e290a0cdde986019c5bca15647aa5601eccb6
       selector:
         matchLabels:
           os: darwin
