@@ -3,46 +3,46 @@ kind: Plugin
 metadata:
   name: kdlogin
 spec:
-  version: v2.0.1
+  version: v2.0.0
   platforms:
     - bin: kubectl-kdlogin.exe
-      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.1/kubectl-kdlogin_Windows_x86_64.zip
-      sha256: af101992652100ab44645540e74d225302a80524f7dcbc15da0fe8f37a8857ee
+      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Windows_x86_64.zip
+      sha256: dcc20ba56fd443ef52678de03f9a2a0c084649beec05183dcbf1f6271984415f
       selector:
         matchLabels:
           os: windows
           arch: amd64
     - bin: kubectl-kdlogin.exe
-      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.1/kubectl-kdlogin_Windows_arm64.zip
-      sha256: 693e5bdf2f741c9de54a2d85ff9db2b32ce0e29e39d31516474b52eeb875e2d3
+      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Windows_arm64.zip
+      sha256: 04fb80061f3b2feff4a6f4cf64b5cb63d48be458cf76fa6be06318b955956a9b
       selector:
         matchLabels:
           os: windows
           arch: arm64
     - bin: kubectl-kdlogin
-      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.1/kubectl-kdlogin_Linux_x86_64.tar.gz
-      sha256: da86513c6bd967a7d4d6f18bbdc94ff5c3c50ae6159dc4ea40ddb76e7775bd81
+      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Linux_x86_64.tar.gz
+      sha256: 88e3f5dc37091fcc0c3f2fd739c946e5113e5834f39a6f6d3dc202cff8dd9578
       selector:
         matchLabels:
           os: linux
           arch: amd64
     - bin: kubectl-kdlogin
-      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.1/kubectl-kdlogin_Linux_arm64.tar.gz
-      sha256: 11a210a26f2063d46212e9c4aa03e78a79d99c3d82c945e7aa8a8c8608befb3b
+      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Linux_arm64.tar.gz
+      sha256: c2adf1a54c9cd393fa8eae5659b174c4ce850a352a9a5de2033e8a347d53351b
       selector:
         matchLabels:
           os: linux
           arch: arm64
     - bin: kubectl-kdlogin
-      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.1/kubectl-kdlogin_Darwin_x86_64.tar.gz
-      sha256: 2fba33bc0c652d3c7ea510fbadc27ca49d1f5821954fe1f09839e2621d2e076f
+      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Darwin_x86_64.tar.gz
+      sha256: fe116f7fe7a1093183a1c1bb72326ec492585b6382090e3fd0b3c581f3940fd7
       selector:
         matchLabels:
           os: darwin
           arch: amd64
     - bin: kubectl-kdlogin
-      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.1/kubectl-kdlogin_Darwin_arm64.tar.gz
-      sha256: f22281c6914a4b1de6fd74cfc7e6f3e16861c0130ef4986999433da96226adef
+      uri: https://github.com/devopstales/KubeDash/releases/download/2.0.0/kubectl-kdlogin_Darwin_arm64.tar.gz
+      sha256: 2724b2fa45584612b457298a3c0596b040aee0b1ec99cca2d48a8158fdc3eaeb
       selector:
         matchLabels:
           os: darwin
